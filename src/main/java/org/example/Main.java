@@ -10,9 +10,12 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        String filePath = "C:\\Users\\Lvasi\\Desktop\\Software_5.json"; // Путь к файлу с отзывами
+        Scanner scanner = new Scanner(System.in); // Создаем Scanner для ввода данных с консоли
         Processor processor = new Processor();
-        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Введите путь к файлу, без ковычек");
+        String filePath = scanner.nextLine(); // Пользователь вводит путь к файлу
+
 
         try {
             // Загружаем отзывы из файла
